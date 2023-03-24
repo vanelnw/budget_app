@@ -18,10 +18,14 @@ a {
   text-decoration: none;
 }
 
+body{
+  background-color: rgb(237, 233, 233);
+}
+
 .main_container {
   width: 100%;
   padding: 20px 0;
-  background-color: #fff;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,7 +100,7 @@ form {
 .category {
   margin: 5px auto;
   padding: 5px;
-  background-color: rgb(198, 203, 202);
+  background-color:#fff;
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -104,7 +108,8 @@ form {
 }
 
 .add_category {
-  background-color: aquamarine;
+  background-color: rgb(7, 185, 63);
+  color: white;
 }
 
 .save {
@@ -126,7 +131,6 @@ form {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  background-color: azure;
 }
 
 .transaction_head {
@@ -135,7 +139,8 @@ form {
   justify-content: space-between;
   align-items: center;
   padding: 5px;
-  background-color: rgb(76, 144, 144);
+  background-color:#fff;
+  color: black;
 }
 
 .icon {
