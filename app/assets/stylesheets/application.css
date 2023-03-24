@@ -1,0 +1,144 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+a {
+  text-decoration: none;
+}
+
+.main_container {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spalsh_title {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.button {
+  width: 90%;
+  text-align: center;
+  padding: 15px 0;
+  margin: 0 15px;
+  border-radius: 10px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.signin {
+  background-color: blue;
+  color: #fff;
+}
+
+.new_user {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.field {
+  width: 100%;
+}
+
+.field input {
+  width: 92%;
+  padding: 10px;
+}
+
+.input_check {
+  width: fit-content !important;
+}
+
+.remember {
+  display: flex;
+}
+
+.category {
+  margin: 5px auto;
+  padding: 5px;
+  background-color: rgb(198, 203, 202);
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.add_category {
+  background-color: aquamarine;
+}
+
+.save {
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.back {
+  background-color: black;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.transaction_container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: azure;
+}
+
+.transaction_head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: rgb(76, 144, 144);
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+}
