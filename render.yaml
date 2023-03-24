@@ -1,6 +1,6 @@
 databases:
   - name: postgres
-    plan: postgres-dev
+    plan: starter
     ipAllowList: []
 
 services:
