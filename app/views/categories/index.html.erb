@@ -1,0 +1,25 @@
+<div class="main_container">
+<h1>All Categories</h1>
+
+<% if @categories.any? %>
+    <% @categories.each do |category| %>
+        
+      <div class="category">
+        <%= image_tag category.icon,skip_pipeline: true, class:'icon'%>
+        <div>
+            <h3><%= link_to category.name, category_path(category) %></h3>
+            <p><%= category.created_at.strftime("%d-%m-%Y") %></p>
+        </div>
+        <p><%= number_to_currency(category.total_amount) %></p>
+       
+      </div>
+    <% end %> 
+ <% else %>
+ <p style="margin-top: 50px; text-align:center; color: orange; font-weight:bold;">
+ There is no category added yet!
+</p>
+<% end %>
+
+<%= link_to 'Add a new category', new_category_path, class:"button add_category" %>
+<%= button_to "Log out", destroy_user_session_path,  class:"save", method: :delete %>
+</div>
