@@ -1,0 +1,35 @@
+<div class="main_container">
+<h1>New Category</h1>
+<%= form_with model:@transaction, url: category_transactions_path, data: { turbo:false } do |f| %>
+    <% if @transaction.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+        <ul>
+        <% @transaction.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :amount %>
+      <%= f.number_field :amount %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :category %>
+      <%= f.collection_select(:category_id, Category.where(user_id: current_user.id).order(:name),:id,:name) %>
+    </div>
+  
+    <div class="actions">
+      <%= f.submit "Save" %>
+      <%= link_to 'Back', categories_path, class:"back" %>
+    </div>
+  <% end %>
+  </div>

@@ -1,0 +1,34 @@
+<div class="transaction_container">
+<div class="transaction_head">
+    <h3><%= @category.name %></h3>
+
+    
+    <p> <%= number_to_currency(@total_amount) %></p>
+
+</div>
+
+<% if @transactions.any? %>
+
+    <% @transactions.each do |transaction| %>
+      <div class="category">
+        <%= image_tag @category.icon,skip_pipeline: true, class:'icon'%>
+        <div>
+            <p><%= transaction.name %></p>
+            <p><%= number_to_currency(transaction.amount) %></p>
+        </div>
+        <p><%= transaction.created_at.to_date %></p>
+      </div>
+    <% end %>
+<% else %>
+    <p style="margin-top: 50px; text-align:center; color: orange; font-weight:bold;">
+    There is no Transaction added for this Category yet!
+   </p>
+<% end %>
+
+  <%= link_to 'Add a new transaction', new_category_transaction_path(@category), class:"button add_category" %>
+
+
+<div>
+  <%= link_to 'Back', categories_path, class:"back" %>
+</div>
+</div>
