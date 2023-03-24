@@ -1,8 +1,6 @@
 databases:
   - name: postgres
     plan: postgres-dev
-    poolSize: 1
-    diskSizeGB: 1
     ipAllowList: []
 
 services:
