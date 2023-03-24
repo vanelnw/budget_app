@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
@@ -13,7 +11,7 @@ class Ability
 
     return unless user.present?
 
-    can :destroy, Category, user: user
-    can :destroy, Transaction, user: user
+    can(:destroy, Category, user:)
+    can :destroy, Transaction, user:
   end
 end
