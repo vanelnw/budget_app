@@ -31,7 +31,6 @@ class CategoriesController < ApplicationController
 
   private
 
-
   def set_user
     @user = current_user
   end
